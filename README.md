@@ -1,6 +1,6 @@
-# Bike Sharing SSS Dashboard
+# Bike Sharing SSS Dashboard 🚴✨
 
-Analisis data dilakukan menggunakan data yang digunakan adalah data Bike Sharing untuk menjawab pertanyaan bisnis berikut:
+Analisis data dilakukan menggunakan data Bike Sharing untuk menjawab pertanyaan bisnis berikut:
 - Bagaimana tren jumlah sepeda yang disewa dalam 2 tahun terakhir?
 - Apa perbedaan rata-rata jumlah sepeda yang disewa setiap harinya antara penyewa kasual dan penyewa terdaftar?
 - Bagaimana cuaca mempengaruhi rata-rata jumlah sepeda yang disewa?
