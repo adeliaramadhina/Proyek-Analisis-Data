@@ -90,7 +90,7 @@ correlation_df = create_correlation_df(main_data)
 
 # Jumlah Sepeda yang Disewa
 st.header('Bike Rental SSS :sparkles::sparkles::sparkles:')
-st.subheader('Daily Orders')
+st.subheader('Daily Rental')
 
 total_rental = daily_rental_df.total_rental.sum()
 st.metric("Total Rental Bikes", value=total_rental)
@@ -197,4 +197,4 @@ with tab3:
     st.pyplot(fig_wind)
 
 
-st.caption('SSS')
+st.caption('@ Visionary Vision 2024')
