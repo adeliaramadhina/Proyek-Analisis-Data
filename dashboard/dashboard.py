@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 
-sns.set(style='dark')
+sns.set(style='light')
 
 # Helper function yang dibutuhkan untuk menyiapkan berbagai dataframe
 
