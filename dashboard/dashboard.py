@@ -79,8 +79,6 @@ with st.sidebar:
 main_data = main_data[(main_data["dteday"] >= str(start_date)) & 
                 (main_data["dteday"] <= str(end_date))]
 
-# st.dataframe(main_data)
-
 # Menyiapkan berbagai dataframe
 daily_rental_df = create_daily_rental_df(main_data)
 casual_weekday_df = create_casual_weekday_df(main_data)
@@ -173,28 +171,28 @@ st.pyplot(fig)
 
 
 # Korelasi antara Total Rental Bikes dengan Temperature, Humidity, and Wind Speed
-st.subheader("Total Rental Bikes vs Temperature, Humidity, and Wind Speed")
+st.subheader("Correlation on Total Rental Bikes")
 
 tab1, tab2, tab3 = st.tabs(["Temperature", "Humidity", "Windspeed"])
  
 with tab1:
-    st.header("Temperature")
+    st.header("Total Rental Bikes vs Temperature")
     st.metric("Correlation Value", value=round(correlation_df[correlation_df['Feature'] == 'temp']['Correlation'].values[0], 3))
     fig_temp, ax_temp = plt.subplots(figsize=(8, 5))
     sns.regplot(x=main_data["temp"], y=main_data["cnt"], color="#6A9C89", line_kws={"color": "#424242"}, ax=ax_temp)
     st.pyplot(fig_temp)
  
 with tab2:
-    st.header("Humidity")
+    st.header("Total Rental Bikes vs Humidity")
     st.metric("Correlation Value", value=round(correlation_df[correlation_df['Feature'] == 'hum']['Correlation'].values[0], 3))
-    fig_hum, ax_hum = plt.subplots(figsize=(8, 5))  # Adjust the size as needed
+    fig_hum, ax_hum = plt.subplots(figsize=(8, 5))
     sns.regplot(x=main_data["hum"], y=main_data["cnt"], color="#6A9C89", line_kws={"color": "#424242"}, ax=ax_hum)
     st.pyplot(fig_hum)
  
 with tab3:
-    st.header("Windspeed")
+    st.header("Total Rental Bikes vs Windspeed")
     st.metric("Correlation Value", value=round(correlation_df[correlation_df['Feature'] == 'windspeed']['Correlation'].values[0], 3))
-    fig_wind, ax_wind = plt.subplots(figsize=(8, 5))  # Adjust the size as needed
+    fig_wind, ax_wind = plt.subplots(figsize=(8, 5))
     sns.regplot(x=main_data["windspeed"], y=main_data["cnt"], color="#6A9C89", line_kws={"color": "#424242"}, ax=ax_wind)
     st.pyplot(fig_wind)
 
